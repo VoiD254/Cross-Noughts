@@ -37,7 +37,7 @@ function checkWin() {
 		}
 	});
 
-	if (Array.from(boxtext).every((box) => box.innerText !== "")) {
+	if ((Array.from(boxtext).every((box) => box.innerText !== "")) && isGameOver === false) {
 		document.querySelector(".info").innerText = "It's a draw";
 		isGameOver = true;
 		turnOver.pause();
